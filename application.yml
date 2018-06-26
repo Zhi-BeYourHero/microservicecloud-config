@@ -1,14 +1,14 @@
-Spring:
+spring:
     profiles:
     active:
     - dev
 ---
-Spring:
+spring:
     profiles: dev 
     application:
         name: micorservicecloud-config-zhi-dev
 ---
-Spring:
+spring:
     profiles: test 
     application:
         name: micorservicecloud-config-zhi-test
