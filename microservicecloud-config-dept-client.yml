@@ -14,7 +14,7 @@ mybatis:
 
 spring:
    application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
    profiles: dev
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
@@ -30,9 +30,9 @@ spring:
 eureka:
   client:   #指客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: microservicecloud-dept8001
+    instance-id: dept-8001.com
     prefer-ip-address: true
 
 info:
@@ -54,7 +54,7 @@ mybatis:
 
 spring:
    application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
    profiles: test
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
@@ -70,9 +70,9 @@ spring:
 eureka:
   client:   #指客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: microservicecloud-dept8002
+    instance-id: dept-8002.com
     prefer-ip-address: true
 
 info:
