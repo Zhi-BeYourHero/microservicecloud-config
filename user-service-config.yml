@@ -1,0 +1,53 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+    
+---
+
+server:
+  port: 8001
+
+spring:
+   application:
+    profiles: dev
+    name: user-service
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dachuang
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+   jpa:
+     hibernate:
+       ddl-auto: update
+     show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: user-service-8001
+    prefer-ip-address: true
+
+info:
+  app.name: xiaozhizhi
+  company.name: 小智智有限公司
+  build.artifact: $project.artifactId$
+  build.version: $project.version$
+
+jwt:
+  secret: mySecret
+  expiration: 604800
+  header: Authorization
+  tokenHead: Bearer
+
+verify-code:
+  query_path: https://api.miaodiyun.com/20150822/industrySMS/sendSMS
+  account_sid: 0c9bb3b9b204455dbd14143a871e799d
+  auth_token: 7fbdf5ab2a5048799a8b1efcf41fdecb

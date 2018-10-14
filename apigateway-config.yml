@@ -1,0 +1,31 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+    
+---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: ApiGateway-5555
+
+spring:
+  application:
+    profiles: dev
+    name: api-gateway
+
+server:
+  port: 5555
+zuul:
+  routes:
+    user-service:
+      path: /user-service/**
+      serviceId: user-service
+    user-route-data-service:
+      path: /user-route-data-service/**
+      serviceId: user-route-data-service
+    trip-service:
+      path: /trip-service/**
+      serviceId: trip-service
