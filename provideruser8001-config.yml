@@ -3,9 +3,7 @@ spring:
     active: 
     - dev
 ---
-spring:
-    profiles: dev 
-    
+
 server:
   port: 8001
 mybatis:
@@ -19,9 +17,9 @@ spring:
    application:
     name: microservicecloud-user
    datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource             # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://39.105.90.155:3306/sc1              # 数据库名称
+    url: jdbc:mysql://39.105.90.155:3306/sc2                 # 数据库名称
     username: root
     password: WYZ980417
     dbcp2:
@@ -34,7 +32,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: microservicecloud-user8001
+    instance-id: microservicecloud-user8002
     prefer-ip-address: true
 
 info:
