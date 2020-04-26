@@ -15,6 +15,7 @@ mybatis:
   - mybatis/mapper/**/*.xml                # mapper映射文件
 
 spring:
+   profiles: dev 
    application:
     name: microservicecloud-user
    datasource:

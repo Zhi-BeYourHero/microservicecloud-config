@@ -4,9 +4,6 @@ spring:
     - dev
 ---
 
-spring:
-    profiles: dev 
-
 server:
   port: 8002
 mybatis:
@@ -16,6 +13,7 @@ mybatis:
   - mybatis/mapper/**/*.xml                # mapper映射文件
 
 spring:
+   profiles: dev 
    application:
     name: microservicecloud-user
    datasource:
