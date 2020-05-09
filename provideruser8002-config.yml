@@ -15,7 +15,7 @@ mybatis:
 spring:
    profiles: dev 
    application:
-    name: microservicecloud-user
+    name: provider
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource             # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -32,7 +32,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: microservicecloud-user8002
+    instance-id: provider2
     prefer-ip-address: true
 
 info:
