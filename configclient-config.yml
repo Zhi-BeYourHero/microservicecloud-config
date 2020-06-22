@@ -15,7 +15,7 @@ spring:
       enabled: true
       trace:
         enabled: true
-foo: JackMa
+foo: LucyMa
 management:
   endpoints:
     web:
