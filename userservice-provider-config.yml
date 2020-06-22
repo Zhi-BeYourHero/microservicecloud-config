@@ -1,0 +1,54 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8700
+  tomcat:
+    remote_ip_header: x-forwarded-for
+    protocol_header: x-forwarded-proto
+
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://39.105.90.155:3306/vue_shop?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: WYZ980417
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true
+#    username: root
+#    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  http: # 不设置就乱码
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+  application:
+    name: service-user
+  redis:
+    host: 39.105.90.155
+    port: 6379
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true
+  freemarker:
+    charset: UTF-8
+    content-type: text/html
+    enabled: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.bosssoft.hr.train.datadictprovider.entity
+
+#showSql
+logging:
+  level:
+    com:
+      bosssoft:
+        hr:
+          train:
+            datadictprovider:
+              dao: debug
