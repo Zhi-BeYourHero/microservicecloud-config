@@ -1,0 +1,16 @@
+server:
+  port: 8889
+  
+spring:
+    profiles: dev
+    application:
+        name: microservicecloud-config-client
+foo: JackMa
+---
+server:
+    port: 8890
+spring:
+    profiles: test
+    application:
+        name: microservicecloud-config-client
+foo: JackMa
